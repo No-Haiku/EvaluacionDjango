@@ -1,0 +1,16 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Top Usuarios</title>
+</head>
+<body>
+    <h1>Top 5 Usuarios con Mayor Cantidad de Unidades Vendidas</h1>
+    <ul>
+        {% for user in top_users %}
+            <li>{{ user.nickname }}</li>
+        {% endfor %}
+    </ul>
+</body>
+</html>

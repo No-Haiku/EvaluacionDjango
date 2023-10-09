@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Publicaciones Más Caras</title>
+</head>
+<body>
+    <h1>Veinte Publicaciones Más Caras en la Categoría "Smartwatch"</h1>
+    <ul>
+        {% for listing in expensive_listings %}
+            <li>
+                <strong>Título:</strong> {{ listing.title }}<br>
+                <strong>Precio:</strong> ${{ listing.price }}<br>
+                <strong>Permalink:</strong> <a href="{{ listing.permalink }}" target="_blank">{{ listing.permalink }}</a>
+            </li>
+        {% endfor %}
+    </ul>
+</body>
+</html>
